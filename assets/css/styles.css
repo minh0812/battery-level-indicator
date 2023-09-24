@@ -61,6 +61,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: all 0.3s ease-in-out;
 }
 
 body.light-mode {
@@ -87,6 +88,7 @@ body.light-mode {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  transition: all 0.3s;
 }
 
 .battery__card::before,
@@ -96,6 +98,7 @@ body.light-mode {
   height: 8px;
   background: var(--status-battery-color);
   width: 100%;
+  transition: all 0.3s;
 }
 
 .battery__card::before {
@@ -127,7 +130,7 @@ body.light-mode {
 }
 
 .battery__error-text a{
-  color: #fff;
+  color: var(--text-color);
   transition: all 0.3s;
 }
 
