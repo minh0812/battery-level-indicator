@@ -20,6 +20,6 @@
 
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-### ⚠️ Project is not support some browser. Please check list browser support [here](https://caniuse.com/battery-status)!
+### ⚠️ Project is not support some browser. Please check list browser is supported [here](https://caniuse.com/battery-status)!
 
 ![preview img](/preview.png)
