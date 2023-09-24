@@ -117,14 +117,18 @@ body.light-mode {
   background: var(--gradient-color-red);
   padding: 1.5rem;
   border-radius: 1.5rem 1.5rem;
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
   transition: all 0.3s;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.battery__error:hover {
-  transform: scale(1.05);
+.battery__error-text{
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+.battery__error-text a{
+  color: #fff;
+  transition: all 0.3s;
 }
 
 .battery__error i {

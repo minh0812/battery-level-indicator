@@ -30,15 +30,19 @@
 
         <div class="battery__pill">
           <div class="battery__level">
-            <div class="battery__liquid">
-            </div>
+            <div class="battery__liquid"></div>
             <i class="ri-flashlight-line icon-charging"></i>
           </div>
         </div>
       </div>
       <div class="battery__error">
         <i class="ri-error-warning-line"></i>
-        Your browser does not support the battery API !!!
+        <p class="battery__error-text">
+          Your browser does not support the battery API. <br />
+          <a href="https://caniuse.com/battery-status" target="_blank">
+            Check browser support here
+          </a>
+        </p>
       </div>
     </section>
 
