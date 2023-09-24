@@ -122,12 +122,31 @@ initBattery();
 /*=============== DARK / LIGHT MODE ===============*/
 const isLightTheme = window.matchMedia("(prefers-color-scheme: light)");
 
-isLightTheme.matches && document.body.classList.add("light-mode");
+const iconTheme = document.querySelector(".icon-theme");
+
+const lightTheme = () => {
+  document.body.classList.add("light-mode");
+  iconTheme.classList.remove("ri-moon-line");
+  iconTheme.classList.add("ri-sun-line");
+};
+
+const darkTheme = () => {
+  document.body.classList.remove("light-mode");
+  iconTheme.classList.remove("ri-sun-line");
+  iconTheme.classList.add("ri-moon-line");
+};
+
+const initTheme = () => {
+  isLightTheme.matches ? lightTheme() : darkTheme();
+};
 
 isLightTheme.addEventListener("change", () => {
-  if (isLightTheme.matches) {
-    document.body.classList.add("light-mode");
-  } else {
-    document.body.classList.remove("light-mode");
-  }
+  initTheme();
+});
+
+initTheme();
+iconTheme.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+  iconTheme.classList.toggle("ri-sun-line");
+  iconTheme.classList.toggle("ri-moon-line");
 });
