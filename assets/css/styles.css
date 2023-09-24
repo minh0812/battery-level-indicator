@@ -215,7 +215,7 @@ body.light-mode {
   background: var(--gradient-color-red);
   box-shadow: inset -10px 0 12px hsla(0, 0%, 0%, 0.1),
     inset 12px 0 12px hsla(0, 0%, 0%, 0.15);
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .battery__liquid::after {
