@@ -21,8 +21,8 @@ const initBattery = () => {
       batteryPercentage.innerHTML = level + "%";
 
       /* 2. We update the background level of the battery */
-      batteryLiquid.style.height = `${parseInt(batt.level * 100)}%`;
-      
+      batteryLiquid.style.height = `${level}%`;
+
       /* 3 We validate if the battery is charging */
       if (batt.charging && level < 100) {
         iconCharging.style.display = "block";
@@ -38,6 +38,7 @@ const initBattery = () => {
           "var(--gradient-color-green)"
         );
         batteryLiquid.style.animation = "animated-charging-battery 3s infinite";
+        batteryLiquid.style.setProperty("--percentage-battery", `${level}%`);
         return;
       } else {
         batteryLiquid.style.animation = "none";
