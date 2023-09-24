@@ -77,7 +77,6 @@ body.light-mode {
   height: 100vh;
   display: grid;
   place-items: center;
-  margin: 0 1.5rem;
 }
 
 .battery__card {
