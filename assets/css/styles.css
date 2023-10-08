@@ -231,6 +231,29 @@ body.light-mode {
   border-radius: 50%;
 }
 
+.author {
+  position: absolute;
+  /* bottom: 1rem; */
+  /* top: 1rem; */
+  right: 50%;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  transform: translateX(50%);
+  font-size: var(--smaller-font-size);
+}
+
+.author a {
+  color: var(--text-color);
+  transition: color 0.3s;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.author i {
+  color: red;
+}
+
 /* Full battery icon color */
 .green-color {
   background: var(--gradient-color-green);
@@ -342,5 +365,8 @@ body.light-mode {
   }
   .battery__error {
     font-size: 1.5rem;
+  }
+  .author {
+    font-size: 0.6rem;
   }
 }

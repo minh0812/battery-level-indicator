@@ -6,6 +6,7 @@ const initBattery = () => {
   const batteryCard = document.querySelector(".battery__card");
   const batteryError = document.querySelector(".battery__error");
   const iconCharging = document.querySelector(".icon-charging");
+  const author = document.querySelector(".author");
 
   if (!navigator.getBattery) {
     batteryCard.style.display = "none";
@@ -43,6 +44,15 @@ const initBattery = () => {
       } else {
         batteryLiquid.style.animation = "none";
         iconCharging.style.display = "none";
+      }
+
+      if(batt.charging || level <= 20 || level == 100) {
+        author.style.removeProperty("bottom");
+        author.style.setProperty("top", "1rem");
+      }
+      else {
+        author.style.removeProperty("top");
+        author.style.setProperty("bottom", "1rem");
       }
 
       /* 4. We validate full battery, low battery */
