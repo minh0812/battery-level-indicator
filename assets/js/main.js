@@ -23,6 +23,16 @@ const initBattery = () => {
 
       /* 2. We update the background level of the battery */
       batteryLiquid.style.height = `${level}%`;
+      
+      // update author position
+      if(batt.charging || level <= 20 || level == 100) {
+        author.style.removeProperty("bottom");
+        author.style.setProperty("top", "1rem");
+      }
+      else {
+        author.style.removeProperty("top");
+        author.style.setProperty("bottom", "1rem");
+      }
 
       /* 3 We validate if the battery is charging */
       if (batt.charging && level < 100) {
@@ -46,14 +56,6 @@ const initBattery = () => {
         iconCharging.style.display = "none";
       }
 
-      if(batt.charging || level <= 20 || level == 100) {
-        author.style.removeProperty("bottom");
-        author.style.setProperty("top", "1rem");
-      }
-      else {
-        author.style.removeProperty("top");
-        author.style.setProperty("bottom", "1rem");
-      }
 
       /* 4. We validate full battery, low battery */
       if (level == 100) {

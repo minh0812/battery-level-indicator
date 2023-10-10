@@ -233,8 +233,6 @@ body.light-mode {
 
 .author {
   position: absolute;
-  /* bottom: 1rem; */
-  /* top: 1rem; */
   right: 50%;
   font-size: 0.75rem;
   color: var(--text-color);
@@ -355,6 +353,12 @@ body.light-mode {
   }
   .battery__error {
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .author {
+    font-size: 0.75rem;
   }
 }
 
